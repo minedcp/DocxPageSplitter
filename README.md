@@ -1,46 +1,56 @@
 
-# DocxPageSplitter
+# PDF Page Splitter
 
 ## Description
-**DocxPageSplitter** is a Python script designed to automate the process of splitting each page of a `.docx` document into separate Word files. This tool is perfect for anyone looking to manage large documents by breaking them down into individual pages for easier handling, editing, or conversion to other formats, such as HTML.
+**PDF Page Splitter** is a Python script designed to split a multi-page PDF into individual PDF files, each containing a single page. This tool is perfect for anyone looking to break down a large PDF document into separate, manageable files.
 
 ## Features
-- Automatically detects and separates pages in a `.docx` file.
-- Saves each page as a new `.docx` document.
+- Automatically splits each page of a PDF into a new PDF file.
+- Saves each page as a separate PDF in the specified output directory.
 - Simple and easy to use with minimal setup.
 
 ## Requirements
 - Python 3.x
-- `python-docx` library
+- `PyPDF2` library
 
 ## Installation
+To use this script, you'll need to have Python installed. Additionally, you'll need to install the `PyPDF2` library:
+
 ```bash
-pip install python-docx
+pip install PyPDF2
 ```
 
 ## Usage
-1. Clone the repository.
-   ```bash
-   git clone https://github.com/yourusername/DocxPageSplitter.git
-   ```
-2. Navigate to the project directory.
-   ```bash
-   cd DocxPageSplitter
-   ```
-3. Run the script with your `.docx` file as input.
-   ```bash
-   python split_docx.py your_input_file.docx output_directory
-   ```
-4. Retrieve each page as a separate `.docx` file in your specified output directory.
+1. Clone or download this repository.
+2. Open a terminal and navigate to the project directory.
+3. Run the script with your PDF file as input and specify an output directory:
 
-## Ideal for
-- Authors, researchers, and anyone dealing with large Word documents.
-- Developers looking to convert Word documents into web pages or other formats.
+   ```bash
+   python split_pdf.py <input_pdf_path> <output_folder>
+   ```
+
+   Replace `<input_pdf_path>` with the path to your multi-page PDF file, and `<output_folder>` with the path to the directory where you want the split pages to be saved.
+
+## Example
+If you have a PDF named `document.pdf` with 10 pages, you can split it like this:
+
+```bash
+python split_pdf.py document.pdf split_pages
+```
+
+This will create a folder named `split_pages` containing 10 separate PDF files:
+
+```
+split_pages/
+├── page_1.pdf
+├── page_2.pdf
+├── page_3.pdf
+...
+└── page_10.pdf
+```
 
 ## Contributing
-Contributions, issues, and feature requests are welcome!
-
-Feel free to fork the project and submit pull requests.
+Contributions, issues, and feature requests are welcome! Feel free to fork the project and submit pull requests.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
